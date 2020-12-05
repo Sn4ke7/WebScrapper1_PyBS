@@ -23,6 +23,7 @@ for item in productlist:
 print(len(productlinks))
 # print(productlist)
 
+# TODO: Find loop that would function as checker of page count (while with try except finally?)
 
 # 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36'
 
