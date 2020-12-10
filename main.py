@@ -22,8 +22,11 @@ for x in range(1,3):
             productlinks.append(baseurl + link['href'])
             # print(link['href'])
 
-print(len(productlinks))
-print(productlinks)
+
+name = soup.find('h1', class_='product-main__name').text.strip()
+rating = soup.find('span', class_="review-overview__rating star-rating start-rating--30").text
+# print(len(productlinks))
+# print(productlinks)
 # print(productlist)
 
 # TODO: Find loop that would function as checker of page count (while with try except finally?)
