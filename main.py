@@ -25,6 +25,8 @@ for x in range(1,3):
 
 name = soup.find('h1', class_='product-main__name').text.strip()
 rating = soup.find('span', class_="review-overview__rating star-rating start-rating--30").text
+price = soup.find('p', class_='product-action__price').text.strip()
+print(name,rating,price)
 # print(len(productlinks))
 # print(productlinks)
 # print(productlist)
