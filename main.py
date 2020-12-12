@@ -22,11 +22,15 @@ for x in range(1,3):
             productlinks.append(baseurl + link['href'])
             # print(link['href'])
 
+testlink = "https://www.thewhiskyexchange.com/p/37325/suntory-torys-classic"
+r = requests.get(testlink, headers=headers)
+soup = BeautifulSoup(r.content, 'lxml')
+print(soup.find('h1'), class_="product-main__name").text
 
-name = soup.find('h1', class_='product-main__name').text.strip()
-rating = soup.find('span', class_="review-overview__rating star-rating start-rating--30").text
-price = soup.find('p', class_='product-action__price').text.strip()
-print(name,rating,price)
+# name = soup.find('h1', class_='product-main__name').text.strip()
+# rating = soup.find('span', class_="review-overview__rating star-rating start-rating--30").text
+# price = soup.find('p', class_='product-action__price').text.strip()
+# print(name,rating,price)
 # print(len(productlinks))
 # print(productlinks)
 # print(productlist)
