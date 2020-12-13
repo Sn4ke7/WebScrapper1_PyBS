@@ -25,7 +25,7 @@ for x in range(1,3):
 testlink = "https://www.thewhiskyexchange.com/p/37325/suntory-torys-classic"
 r = requests.get(testlink, headers=headers)
 soup = BeautifulSoup(r.content, 'lxml')
-print(soup.find('h1'), class_="product-main__name").text
+name = print(soup.find('h1'), class_="product-main__name").text.strip()
 
 # name = soup.find('h1', class_='product-main__name').text.strip()
 # rating = soup.find('span', class_="review-overview__rating star-rating start-rating--30").text
