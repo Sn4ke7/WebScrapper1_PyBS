@@ -25,9 +25,14 @@ for x in range(1,3):
 
 testlink = 'https://www.thewhiskyexchange.com/p/37325/suntory-torys-classic'
 r = requests.get(testlink, headers=headers)
-#soup = BeautifulSoup(r.content, 'lxml')
-#name = print(soup.find('h1'), class_="product-main__name").text.strip()
+soup = BeautifulSoup(r.content, 'lxml')
 
+name = soup.find('h1', class_='product-main__name').text.strip()
+rating = soup.find('span', class_='review-overview__rating star-rating star-rating--30').text.strip()
+reviews = soup.find('span', class_='review-overview__count').text.strip()
+price = soup.find('p', class_='product-action__price').text.strip()
+
+print(name,rating,reviews,price)
 
 # TODO: Find loop that would function as checker of page count (while with try except finally?)
 # TODO: Check if simplest form works with other sites
