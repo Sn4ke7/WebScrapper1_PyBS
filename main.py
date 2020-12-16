@@ -23,16 +23,34 @@ for x in range(1,3):
             productlinks.append(baseurl + link['href'])
            #print(link['href'])
 
-testlink = 'https://www.thewhiskyexchange.com/p/37325/suntory-torys-classic'
-r = requests.get(testlink, headers=headers)
-soup = BeautifulSoup(r.content, 'lxml')
+#testlink = 'https://www.thewhiskyexchange.com/p/37325/suntory-torys-classic'
+whiskylist = []
+for link in productlinks:
 
-name = soup.find('h1', class_='product-main__name').text.strip()
-rating = soup.find('span', class_='review-overview__rating star-rating star-rating--30').text.strip()
-reviews = soup.find('span', class_='review-overview__count').text.strip()
-price = soup.find('p', class_='product-action__price').text.strip()
+    r = requests.get(link, headers=headers)
+    soup = BeautifulSoup(r.content, 'lxml')
 
-print(name,rating,reviews,price)
+    name = soup.find('h1', class_='product-main__name').text.strip()
+    try:
+        price = soup.find('p', class_='product-action__price').text.strip()
+    except:
+        price = 'no price'
+   # reviews = soup.find('span', class_='review-overview__count').text.strip()
+    try:
+        rating = soup.find('div', class_='review-overview__rating star-rating star-rating--30').text.strip()
+    except:
+        rating = 'no rating'
+    whisky = {
+        'name':name,
+        'rating':rating,
+        #'reviews': reviews,
+        'price': price
+
+        }
+    #print(whisky)
+    whiskylist.append(whisky)
+
+#print(name,rating,reviews,price)
 
 # TODO: Find loop that would function as checker of page count (while with try except finally?)
 # TODO: Check if simplest form works with other sites
