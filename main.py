@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+import pandas as pd
 
 #URL of crawled page
 #baseurl = 'https://www.responseelectronics.com'
@@ -49,7 +50,10 @@ for link in productlinks:
         }
     #print(whisky)
     whiskylist.append(whisky)
+    print("Saving: ", whisky['name'])
 
+#df = pd.DataFrame(whiskylist)
+#print(df.head(15))
 #print(name,rating,reviews,price)
 
 # TODO: Find loop that would function as checker of page count (while with try except finally?)
