@@ -55,8 +55,8 @@ for link in productlinks:
 #df = pd.DataFrame(whiskylist)
 #print(df.head(15))
 #print(name,rating,reviews,price)
-# TODO: error to handle https://tinyurl.com/y3dm3h86 (32/64 bit problem)
-
+'''DONE: error to handle https://tinyurl.com/y3dm3h86 (32/64 bit problem)
+ Solution : pip install numpy==1.19.3 '''
 
 # TODO: Find loop that would function as checker of page count (while with try except finally?)
 # TODO: Check if simplest form works with other sites
