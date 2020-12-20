@@ -52,10 +52,10 @@ for link in productlinks:
     whiskylist.append(whisky)
     print("Saving: ", whisky['name'])
 
-#df = pd.DataFrame(whiskylist)
-#print(df.head(15))
+df = pd.DataFrame(whiskylist)
+print(df.head(15))
 #print(name,rating,reviews,price)
-'''DONE: error to handle https://tinyurl.com/y3dm3h86 (32/64 bit problem)
+''' DONE: error to handle https://tinyurl.com/y3dm3h86 (32/64 bit problem)
  Solution : pip install numpy==1.19.3 '''
 
 # TODO: Find loop that would function as checker of page count (while with try except finally?)
