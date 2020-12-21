@@ -53,7 +53,7 @@ for link in productlinks:
     print("Saving: ", whisky['name'])
 
 df = pd.DataFrame(whiskylist)
-print(df.head(15))
+print(df.head(-1))
 #print(name,rating,reviews,price)
 ''' DONE: error to handle https://tinyurl.com/y3dm3h86 (32/64 bit problem)
  Solution : pip install numpy==1.19.3 '''
