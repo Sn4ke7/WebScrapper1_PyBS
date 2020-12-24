@@ -11,5 +11,7 @@ headers = {
 
 r = requests.get('https://www.responseelectronics.com/shop/safety-and-security/cameras/era-protect-wifi-outdoor-1080p-security-camera/')
 print(r)
-
-productlinks = []
+soup = BeautifulSoup(r.content,'lxml')
+productlist = soup.find_all('div', class_='')
+print(productlist)
+# productlinks = []
