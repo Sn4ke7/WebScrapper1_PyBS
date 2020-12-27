@@ -27,5 +27,13 @@ print(name)
 price = soup.find('h2')
 print(price)
 
+
+# TODO: Getting images from site
+# https://www.responseelectronics.com/globalassets/response/images/scaexwh1080_2.jpg
+#scaexwh1080_2.jpg
+'''
+<img alt="ERA Protect WiFi Outdoor 1080p Security Camera" class="img-responsive" itemprop="image" ng-src="/globalassets/response/images/scaexwh1080_2.jpg" src="/globalassets/response/images/scaexwh1080_2.jpg">
+'''
+
 #print(productlist)
 # productlinks = []
