@@ -26,7 +26,10 @@ name = soup.find('h1', class_="h3").text
 print(name)
 price = soup.find('h2')
 print(price)
+prod_img = []
+prod_img = soup.find_all('img', class_="img-responsive bordered")
 
+print(prod_img)
 
 # TODO: Getting images from site
 # https://www.responseelectronics.com/globalassets/response/images/scaexwh1080_2.jpg
