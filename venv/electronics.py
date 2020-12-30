@@ -27,11 +27,12 @@ print(name)
 price = soup.find('h2')
 print(price)
 prod_img = []
-prod_img = soup.find_all('img', class_="img-responsive bordered")
+prod_img = soup.find_all('img', class_="img-responsive bordered", src_="")
 
 print(prod_img)
 
 # TODO: Getting images from site
+# TODO: Research how - non python outer classes works ex. 'class_=""', can search other types ?
 # https://www.responseelectronics.com/globalassets/response/images/scaexwh1080_2.jpg
 #scaexwh1080_2.jpg
 '''
